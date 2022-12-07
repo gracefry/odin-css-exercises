@@ -1,10 +1,14 @@
 .header  {
     font-family: monospace;
     background: papayawhip;
+    /* correct: */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex: 1;
+    /* incorrect:
+    flex: 1; */
+    /* solution: */
+    padding: 8px /* move from .logo */
   }
   
   .logo {
@@ -13,8 +17,8 @@
     color: tomato;
     background: white;
     padding: 4px 32px;
-    margin: 15px;
-    justify-self: center;
+    /* margin: 15px; should be in .header */
+    /* justify-self: center; incorrect - unneeded */
   }
 
   .right-links {
@@ -30,7 +34,11 @@
     /* this removes the dots on the list items*/
     list-style-type: none;
     display: flex;
-    gap: 10px;
+    /* correct: */
+    gap: 10px; /* they had 8px */
+    /* solution: */
+    margin: 0;
+    padding: 0; /* pushes right to side */
   }
   
   a {
