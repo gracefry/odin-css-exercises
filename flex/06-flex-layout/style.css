@@ -6,32 +6,31 @@ body {
   overflow: hidden;
   font-family: Roboto, sans-serif;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; superfluous */
   flex-direction: column;
 }
 
 .header,
 .footer {
+    /* correct */
     display: flex;
     padding: 16px;
-    width: 100%;
     justify-content: space-between;
+    /* width: 100%; incorrect */
 }
 
 .footer {
+    /* correct */
     background-color: #eee;
 }
 
+/* superfluous 
 .left-links, 
 .right-links {
-    display: flex;
-    gap: 16px;
-    padding: 0px;
-    margin: 0px;
     padding-left: 16px;
     padding-right: 16px;
-}
+} */
 
 img {
   width: 600px;
@@ -42,7 +41,7 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
-  padding: 8px 16px;
+  padding: 8px 16px; /* correct */
 }
 
 input {
@@ -54,19 +53,29 @@ input {
 }
 
 .content {
+    /* correct: */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* solution: */
+    flex: 1;
+    /* mine:
     height: 90%;
-    width: 100%;
+    width: 100%; */
 }
 
 a {
+    /* correct */
     text-decoration: none;
     color: rgb(60, 60, 60);
 }
 
 ul {
     list-style-type: none;
+    /* correct but move from .left-links .right-links */
+    display: flex;
+    gap: 16px;
+    padding: 0px;
+    margin: 0px;
 }
