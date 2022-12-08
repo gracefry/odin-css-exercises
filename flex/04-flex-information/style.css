@@ -28,7 +28,7 @@ body {
   .title {
     font-size: 36px;
     font-weight: 900;
-    margin: 32px; /* or margin-bottom */
+    margin-bottom: 32px; /* or margin */
   }
   
   /* do not edit this footer */
